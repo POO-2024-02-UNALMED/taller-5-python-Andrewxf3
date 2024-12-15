@@ -27,5 +27,4 @@ class Pez(Animal):
     def cantidadPeces():
         return len(Pez.listado)
     
-    def getNombre(self):
-        return self.__nombre
+    

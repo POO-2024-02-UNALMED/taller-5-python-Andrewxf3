@@ -24,5 +24,4 @@ class Mamifero(Animal):
     def cantidadMamiferos():
         return len(Mamifero.listado)
     
-    def getNombre(self):
-        return self.__nombre
+  

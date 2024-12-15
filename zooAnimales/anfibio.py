@@ -27,5 +27,4 @@ class Anfibio(Animal):
     def cantidadAnfibios():
         return len(Anfibio.listado)
     
-    def getNombre(self):
-        return self.__nombre
+

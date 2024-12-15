@@ -28,3 +28,6 @@ class Animal:
     
     def getNombre(self):
         return self.__nombre
+    
+    def getEdad(self):
+        return self.__edad
