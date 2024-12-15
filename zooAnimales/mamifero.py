@@ -28,6 +28,6 @@ class Mamifero(Animal):
         return self.__Pelaje
     
     def getPatas(self):
-        return self.__Patas
+        return self.__patas
     
   
