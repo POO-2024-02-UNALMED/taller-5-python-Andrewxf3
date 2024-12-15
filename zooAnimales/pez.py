@@ -27,4 +27,5 @@ class Pez(Animal):
     def cantidadPeces():
         return len(Pez.listado)
     
-    
+    def getColorEscamas(self):
+        return self.__colorEscamas
