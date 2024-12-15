@@ -6,24 +6,27 @@ from pez import Pez
 class Animal:
     totalAnimales = 0
 
-    def __init__(self, nombre, edad, habitat, genero):
-        self.nombre = nombre
-        self.edad = edad
-        self.habitat = habitat
-        self.genero = genero
-        self.zona = None
+    def __init__(self, nombre, edad, habitat, genero, zona=None):
+        self.__nombre = nombre
+        self.__edad = edad
+        self.__habitat = habitat
+        self.__genero = genero
+        self.__zona = zona
         Animal.totalAnimales += 1
-
-    def __str__(self):
-        base = f"Mi nombre es {self.nombre}, tengo una edad de {self.edad}, habito en {self.habitat} y mi género es {self.genero}"
-        if self.zona:
-            return f"{base}, la zona en la que me ubico es {self.zona.nombre}, en el {self.zona.zoologico.nombre}."
-        return base
 
     def movimiento(self):
         return "desplazarse"
 
     @staticmethod
     def totalPorTipo():
-        return f"Mamíferos: {Mamifero.cantidadMamiferos()}, Aves: {Ave.cantidadAves()}, Reptiles: {Reptil.cantidadReptiles()}, Peces: {Pez.cantidadPeces()}, Anfibios: {Anfibio.cantidadAnfibios()}"
+        return (f"Mamiferos: {Mamifero.cantidadMamiferos()}, "
+                f"Aves: {Ave.cantidadAves()}, "
+                f"Reptiles: {Reptil.cantidadReptiles()}, "
+                f"Peces: {Pez.cantidadPeces()}, "
+                f"Anfibios: {Anfibio.cantidadAnfibios()}")
 
+    def toString(self):
+        info = f"Mi nombre es {self.__nombre}, tengo una edad de {self.__edad}, habito en {self.__habitat} y mi género es {self.__genero}"
+        if self.__zona:
+            return f"{info}, la zona en la que me ubico es {self.__zona.getNombre()}, en el {self.__zona.getZoo().getNombre()}."
+        return info

@@ -4,11 +4,14 @@ class Anfibio(Animal):
     ranas = 0
     salamandras = 0
 
-    def __init__(self, nombre, edad, habitat, genero, colorPiel, venenoso):
+    def __init__(self, nombre="", edad=0, habitat="", genero="", colorPiel="", venenoso=False):
         super().__init__(nombre, edad, habitat, genero)
-        self.colorPiel = colorPiel
-        self.venenoso = venenoso
+        self.__colorPiel = colorPiel
+        self.__venenoso = venenoso
         Anfibio.listado.append(self)
+
+    def movimiento(self):
+        return "saltar"
 
     @staticmethod
     def crearRana(nombre, edad, genero):
@@ -23,6 +26,3 @@ class Anfibio(Animal):
     @staticmethod
     def cantidadAnfibios():
         return len(Anfibio.listado)
-
-    def movimiento(self):
-        return "saltar"
