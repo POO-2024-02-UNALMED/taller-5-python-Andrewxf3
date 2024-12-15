@@ -31,3 +31,12 @@ class Animal:
     
     def getEdad(self):
         return self.__edad
+    
+    def getHabitat(self):
+        return self.__habitat
+    
+    def getGenero(self):
+        return self.__genero
+    
+    def getZona(self):
+        return self.__zona
