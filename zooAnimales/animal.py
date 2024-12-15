@@ -25,3 +25,6 @@ class Animal:
         if self.__zona:
             return f"{info}, la zona en la que me ubico es {self.__zona.getNombre()}, en el {self.__zona.getZoo().getNombre()}."
         return info
+    
+    def getNombre(self):
+        return self.__nombre

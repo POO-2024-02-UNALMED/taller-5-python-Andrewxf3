@@ -26,3 +26,6 @@ class Reptil(Animal):
     @staticmethod
     def cantidadReptiles():
         return len(Reptil.listado)
+
+    def getNombre(self):
+        return self.__nombre

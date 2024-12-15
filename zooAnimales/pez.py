@@ -26,3 +26,6 @@ class Pez(Animal):
     @staticmethod
     def cantidadPeces():
         return len(Pez.listado)
+    
+    def getNombre(self):
+        return self.__nombre

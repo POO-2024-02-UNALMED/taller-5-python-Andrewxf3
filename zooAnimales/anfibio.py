@@ -26,3 +26,6 @@ class Anfibio(Animal):
     @staticmethod
     def cantidadAnfibios():
         return len(Anfibio.listado)
+    
+    def getNombre(self):
+        return self.__nombre

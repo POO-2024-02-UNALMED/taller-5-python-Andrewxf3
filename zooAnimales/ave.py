@@ -25,3 +25,6 @@ class Ave(Animal):
     @staticmethod
     def cantidadAves():
         return len(Ave.listado)
+    
+    def getNombre(self):
+        return self.__nombre
