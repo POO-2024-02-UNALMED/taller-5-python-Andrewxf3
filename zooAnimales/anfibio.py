@@ -7,7 +7,7 @@ class Anfibio(Animal):
     def __init__(self, nombre="", edad=0, habitat="", genero="", colorPiel="", venenoso=False):
         super().__init__(nombre, edad, habitat, genero)
         self.__colorPiel = colorPiel
-        self.__venenoso = venenoso
+        self.__isVenenoso = venenoso
         Anfibio.listado.append(self)
 
     def movimiento(self):
