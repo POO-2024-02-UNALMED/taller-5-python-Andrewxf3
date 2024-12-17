@@ -15,11 +15,11 @@ class Animal:
 
     @staticmethod
     def totalPorTipo():
-        return (f"Mamiferos: {Mamifero.cantidadMamiferos()}, "
-                f"Aves: {Ave.cantidadAves()}, "
-                f"Reptiles: {Reptil.cantidadReptiles()}, "
-                f"Peces: {Pez.cantidadPeces()}, "
-                f"Anfibios: {Anfibio.cantidadAnfibios()}")
+        return (f"Mamiferos: {zooAnimales.Mamifero.cantidadMamiferos()}, "
+                f"Aves: {zooAnimales.Ave.cantidadAves()}, "
+                f"Reptiles: {zooAnimales.Reptil.cantidadReptiles()}, "
+                f"Peces: {zooAnimales.Pez.cantidadPeces()}, "
+                f"Anfibios: {zooAnimales.Anfibio.cantidadAnfibios()}")
 
     def toString(self):
         info = f"Mi nombre es {self.__nombre}, tengo una edad de {self.__edad}, habito en {self.__habitat} y mi género es {self.__genero}"
